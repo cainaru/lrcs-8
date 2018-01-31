@@ -127,7 +127,7 @@
         {% endif %}
 
           <div class="page-header-content-container">
-
+          {% block moderation_stat %}
             {% if node.moderation_state and node.moderation_state.value != 'published' %}
               <div class="moderation-state-label">
                 {% if node.moderation_state.value == 'draft' %}
@@ -145,22 +145,17 @@
                 <span class="label label-danger">{% trans %}Published{% endtrans %}</span>
               </div>
             {% endif %}
+          {% endblock %}
 
             <h1 class="page-header">{{ label }}</h1>
-
             {% if content.field_subtitle %}
               <div class="subtitle">
                 {{ content.field_subtitle.0 }}
               </div>
             {% endif %}
-
             {% if content.field_authorship %}
-              <div class="byline">
-                <span>By</span>
-                {{ content.field_authorship.0 }}
-              </div>
+              {{ content.field_authorship }}
             {% endif %}
-
           </div>
 
           {# Renders not full-width featured media/banner media/hero media paragraph #}
@@ -174,33 +169,12 @@
       {% endblock %}
     {% elseif not page and view_mode == 'referenced' %}
       <div class="university-content-container">
-
-        {% if node.moderation_state and node.moderation_state.value != 'published' %}
-          <div class="moderation-state-label">
-            {% if node.moderation_state.value == 'draft' %}
-              <span class="label label-info">{% trans %}Draft{% endtrans %}</span>
-            {% elseif node.moderation_state.value == 'needs_review' %}
-              <span class="label label-warning">{% trans %}Needs Review{% endtrans %}</span>
-            {% elseif node.moderation_state.value == 'internal' %}
-              <span class="label label-success">{% trans %}Published (Local Only){% endtrans %}</span>
-            {% elseif node.moderation_state.value == 'archived' %}
-              <span class="label label-default">{% trans %}Archived{% endtrans %}</span>
-            {% endif %}
-          </div>
-        {% elseif node.moderation_state and node.moderation_state.value == 'published' and logged_in %}
-          <div class="moderation-state-label">
-            <span class="label label-danger">{% trans %}Published{% endtrans %}</span>
-          </div>
-        {% endif %}
-
+        {{ block('moderation_stat') }}
         <h2{{ title_attributes }}>
           <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h2>
         {% if content.field_authorship %}
-          <div class="byline">
-            <span>By</span>
-            {{ content.field_authorship.0 }}
-          </div>
+          {{ content.field_authorship }}
         {% endif %}
       </div>
     {% elseif not page and view_mode == 'teaser' %}
