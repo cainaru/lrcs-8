@@ -15,18 +15,4 @@
  * @ingroup templates
  */
 #}
-{% block content %}
-  {% if site_logo %}
-    <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-    </a>
-  {% endif %}
-  {% if site_name %}
-    <h1 class="name navbar-brand">
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-    </h1>
-  {% endif %}
-  {% if site_slogan %}
-    <p class="navbar-text">{{ site_slogan }}</p>
-  {% endif %}
-{% endblock %}
+
