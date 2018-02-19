@@ -47,3 +47,4 @@
 #43 /home/meadowsw/public_html/littleriverschool.org/core/lib/Drupal/Core/DrupalKernel.php(657): Stack\StackedHttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
 #44 /home/meadowsw/public_html/littleriverschool.org/index.php(19): Drupal\Core\DrupalKernel->handle(Object(Symfony\Component\HttpFoundation\Request))
 #45 {main}
+[15-Feb-2018 14:33:50 America/New_York] Uncaught PHP Exception Drupal\Core\Entity\EntityStorageException: "'media_bundle' entity with ID 'auction_item_image' already exists." at /home/meadowsw/public_html/littleriverschool.org/core/lib/Drupal/Core/Entity/EntityStorageBase.php line 425
