@@ -76,14 +76,6 @@ ul {
   line-height: $line-height-computed;
 }
 
-// li {
-//   margin-bottom: 0.5em;
-// }
-
-// ul ul, ul ol, ol ul, ol ol {
-//   margin-top: 0.5em;
-// }
-
 .menu li, .navbar-nav li, .toolbar-menu li {
   margin-bottom: 0;
 }
@@ -332,50 +324,3 @@ figure figcaption .citation {
 figure figcaption .citation > * {
   margin-top: inherit;
 }
-
-// figcaption.banner-media-caption.caption {
-//   // TODO: Need to wrap featured media in figure tag
-//   display: block;
-//   text-align: right;
-
-//   & span {
-//     display: block;
-//   }
-
-//   & .caption-text,
-//   & .caption-text > * {
-//     font-size: $caption-font-size;
-//     max-width: 100%;
-//     margin-top: 0;
-//   }
-
-//   & .citation,
-//   & .citation > * {
-//     font-size: $citation-font-size;
-//     max-width: $text-max-width;
-//     margin-top: 0;
-//     margin-left: auto;
-//   }
-
-//   & .caption-text > *,
-//   & .citation > * {
-//     display: inline-block;
-//   }
-
-// }
-
-// .field--name-field-caption > * > *,
-// .field--name-field-caption-rich-text > * > * {
-//   // TODO: Need to wrap media in figure tag
-//   // (isn't there a better way to do this?)
-//   font-size: $caption-font-size;
-//   line-height: 2rem;
-//   margin-top: .5rem;
-// }
-
-// .field--name-field-citation > * > * {
-//   // TODO: Need to wrap media in figure tag
-//   // (isn't there a better way to do this?)
-//   font-size: $citation-font-size;
-//   margin-top: .5rem;
-// }

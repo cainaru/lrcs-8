@@ -9588,17 +9588,15 @@ div.paragraph--type--heading:nth-child(1) h2 {
 .paragraph--type--media + .paragraph--type--media {
   margin-top: 2.7rem; }
 
-.section-title {
+.paragraph--type--section .section-title {
   margin-top: 0px; }
-
 .paragraph--type--section.vertical-padding {
   padding-top: 5.4rem;
   padding-bottom: 5.4rem; }
 .paragraph--type--section.text-black {
   color: #000000; }
   .paragraph--type--section.text-black a {
-    color: #337ab7;
-    text-decoration: none; }
+    color: #337ab7; }
     .paragraph--type--section.text-black a:hover, .paragraph--type--section.text-black a:focus {
       color: #22527b;
       text-decoration: underline; }
@@ -9609,6 +9607,12 @@ div.paragraph--type--heading:nth-child(1) h2 {
   color: #ffffff; }
   .paragraph--type--section.text-white a {
     color: #d6d7d9; }
+    .paragraph--type--section.text-white a:hover, .paragraph--type--section.text-white a:focus {
+      color: #d6d7d9;
+      text-decoration: underline; }
+    .paragraph--type--section.text-white a:focus {
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px; }
 
 ol, ul {
   padding-left: 1.5em; }

@@ -1,8 +1,9 @@
-.section-title {
-  margin-top: 0px;
-}
-
 .paragraph--type--section {
+
+  .section-title {
+    margin-top: 0px;
+  }
+
   &.vertical-padding {
   	padding-top: ($line-height-computed * 2);
     padding-bottom: ($line-height-computed * 2);
@@ -12,7 +13,6 @@
 	color: #000000;
   	& a {
       color: $link-color;
-      text-decoration: none;
 
       &:hover,
       &:focus {
@@ -28,8 +28,19 @@
 
   &.text-white {
 	color: #ffffff;
-	& a {
-	  color: #d6d7d9;
-	}
+
+  & a {
+      color: #d6d7d9;
+
+      &:hover,
+      &:focus {
+        color: #d6d7d9;
+        text-decoration: $link-hover-decoration;
+      }
+
+      &:focus {
+        @include tab-focus;
+      }
+    }
   }
 }
