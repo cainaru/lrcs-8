@@ -1,0 +1,23 @@
+uuid: 29fa5d77-49e9-4f82-ad4b-d8d31207b4fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bid_amount
+    - node.type.bid
+id: node.bid.field_bid_amount
+field_name: field_bid_amount
+entity_type: node
+bundle: bid
+label: 'Bid Amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,36 @@
+uuid: 418f0ada-b61a-4a85-ab40-9555319b8b0a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.di_blog
+  module:
+    - block_class
+    - ctools
+    - views
+  theme:
+    - lrcs_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
+id: lrcs_bootstrap_views_block__di_blog_di_blog_block
+theme: lrcs_bootstrap
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_block:di_blog-di_blog_block'
+settings:
+  id: 'views_block:di_blog-di_blog_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      di_blog_post: di_blog_post
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

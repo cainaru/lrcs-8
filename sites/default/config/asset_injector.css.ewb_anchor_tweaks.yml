@@ -1,0 +1,11 @@
+uuid: 6a852d95-e4fb-4973-91a3-7810482273ba
+langcode: en
+status: true
+dependencies: {  }
+id: ewb_anchor_tweaks
+label: 'EWB - Anchor Tweaks'
+code: ".paragraph--type--anchor {\r\n    display: block;\r\n    position: relative;\r\n    top: -150px;\r\n    visibility: hidden;\r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

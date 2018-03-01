@@ -1,0 +1,23 @@
+uuid: f4d324a5-8e64-43fc-ab90-b1e910c4e03f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.auction_item
+  module:
+    - link
+id: node.auction_item.field_website
+field_name: field_website
+entity_type: node
+bundle: auction_item
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

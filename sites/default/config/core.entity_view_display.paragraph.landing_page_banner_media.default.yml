@@ -1,0 +1,22 @@
+uuid: 99aeeedf-f91b-4a93-b503-9eaef750dfd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.landing_page_banner_media.field_banner_media
+    - paragraphs.paragraphs_type.landing_page_banner_media
+id: paragraph.landing_page_banner_media.default
+targetEntityType: paragraph
+bundle: landing_page_banner_media
+mode: default
+content:
+  field_banner_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: landing_page_banner_media
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

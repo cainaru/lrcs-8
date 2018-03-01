@@ -1,0 +1,30 @@
+uuid: 0c30da61-ff27-426e-93c8-ba467111d4a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - media_entity
+id: media.field_auction_image
+field_name: field_auction_image
+entity_type: media
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

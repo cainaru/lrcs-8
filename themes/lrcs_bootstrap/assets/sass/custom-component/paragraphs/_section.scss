@@ -1,0 +1,35 @@
+.section-title {
+  margin-top: 0px;
+}
+
+.paragraph--type--section {
+  &.vertical-padding {
+  	padding-top: ($line-height-computed * 2);
+    padding-bottom: ($line-height-computed * 2);
+  }
+
+  &.text-black {
+	color: #000000;
+  	& a {
+      color: $link-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+      }
+
+      &:focus {
+        @include tab-focus;
+      }
+    }
+  }
+
+  &.text-white {
+	color: #ffffff;
+	& a {
+	  color: #d6d7d9;
+	}
+  }
+}

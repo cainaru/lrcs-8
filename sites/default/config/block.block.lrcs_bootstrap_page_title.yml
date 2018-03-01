@@ -1,0 +1,31 @@
+uuid: a076c405-c2e7-4de7-a8bf-107609a1fbf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - lrcs_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: lrcs_bootstrap_page_title
+theme: lrcs_bootstrap
+region: content
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node/*'
+    negate: true
+    context_mapping: {  }

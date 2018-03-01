@@ -1,0 +1,22 @@
+uuid: 95b47ac5-d582-4f35-8045-706bacf1dd50
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - lrcs_bootstrap
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: lrcs_bootstrap_search
+theme: lrcs_bootstrap
+region: sidebar_second
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

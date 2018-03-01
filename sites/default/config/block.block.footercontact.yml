@@ -1,0 +1,29 @@
+uuid: 99058028-0f15-4829-a2f1-e36d9a62ae2c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:eb2dd7d9-47a6-4c4a-bb89-2af80f1b46bc'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - lrcs_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
+id: footercontact
+theme: lrcs_bootstrap
+region: footer_first
+weight: -10
+provider: null
+plugin: 'block_content:eb2dd7d9-47a6-4c4a-bb89-2af80f1b46bc'
+settings:
+  id: 'block_content:eb2dd7d9-47a6-4c4a-bb89-2af80f1b46bc'
+  label: 'Contact Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

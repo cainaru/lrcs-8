@@ -1,0 +1,17 @@
+uuid: 65b35b77-5847-4cd1-baa7-cf777baa98ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: medium_992x350_
+label: 'Medium Screen (992x350)'
+effects:
+  fca8d2db-5532-450c-8436-20b4615ea432:
+    uuid: fca8d2db-5532-450c-8436-20b4615ea432
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 992
+      height: 350
+      crop_type: focal_point

@@ -1,0 +1,9 @@
+uuid: 2930c21e-771c-48d3-a3c4-5f8362ec6b5a
+langcode: en
+status: true
+dependencies: {  }
+id: anchor
+label: Anchor
+icon_uuid: null
+description: 'Use to create anchor links'
+behavior_plugins: {  }

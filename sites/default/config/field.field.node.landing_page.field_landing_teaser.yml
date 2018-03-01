@@ -1,0 +1,44 @@
+uuid: 7f863be9-7d6a-4fef-ad11-e2cb0684ff30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_teaser
+    - node.type.landing_page
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      simple: simple
+      basic_html: 0
+      iframe: 0
+      restricted_html: 0
+      full_html: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '0'
+        iframe:
+          weight: '0'
+        restricted_html:
+          weight: '0'
+        simple:
+          weight: '0'
+        full_html:
+          weight: '1'
+id: node.landing_page.field_landing_teaser
+field_name: field_landing_teaser
+entity_type: node
+bundle: landing_page
+label: Teaser
+description: '<em><strong>Teaser</strong></em> is a brief summary of this page''s content that will show up in search results.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

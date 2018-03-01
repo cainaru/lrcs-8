@@ -1,0 +1,29 @@
+uuid: ec78b459-a6a3-4cc2-917e-70b785e120ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.auction_item.body
+    - node.type.auction_item
+  module:
+    - text
+    - user
+id: node.auction_item.teaser
+targetEntityType: node
+bundle: auction_item
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_buy_it_now_price: true

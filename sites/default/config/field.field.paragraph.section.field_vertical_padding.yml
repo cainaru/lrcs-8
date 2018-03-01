@@ -1,0 +1,23 @@
+uuid: 690e5727-c7bd-401a-b9a0-486fdd2660a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_vertical_padding
+    - paragraphs.paragraphs_type.section
+id: paragraph.section.field_vertical_padding
+field_name: field_vertical_padding
+entity_type: paragraph
+bundle: section
+label: 'Vertical Padding'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

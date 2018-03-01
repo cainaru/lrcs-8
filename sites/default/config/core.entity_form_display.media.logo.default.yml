@@ -1,0 +1,33 @@
+uuid: b794afe5-55a5-425a-a621-9688f34ce57d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.logo.field_height
+    - field.field.media.logo.field_logo_image
+    - field.field.media.logo.field_width
+    - image.style.thumbnail
+    - media_entity.bundle.logo
+  module:
+    - image
+id: media.logo.default
+targetEntityType: media
+bundle: logo
+mode: default
+content:
+  field_logo_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_height: true
+  field_width: true
+  moderation_state: true
+  name: true
+  path: true
+  uid: true

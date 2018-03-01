@@ -1,0 +1,8 @@
+uuid: 578f4cd1-cadd-4dc5-8b59-fd602fe351be
+langcode: en
+status: true
+dependencies: {  }
+id: di_blog_date
+label: 'Blog date'
+locked: false
+pattern: 'l, F j, Y \a\t g:ia'

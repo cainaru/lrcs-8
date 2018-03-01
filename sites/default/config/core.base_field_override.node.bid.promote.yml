@@ -1,0 +1,22 @@
+uuid: 02d42b5f-a74e-446c-af67-307ef75b826a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bid
+id: node.bid.promote
+field_name: promote
+entity_type: node
+bundle: bid
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

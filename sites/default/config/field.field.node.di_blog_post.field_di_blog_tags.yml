@@ -1,0 +1,29 @@
+uuid: 4a68ec9e-9a8d-4b7d-8db0-61ad1bd6d090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_di_blog_tags
+    - node.type.di_blog_post
+    - taxonomy.vocabulary.tags
+id: node.di_blog_post.field_di_blog_tags
+field_name: field_di_blog_tags
+entity_type: node
+bundle: di_blog_post
+label: 'Blog tags'
+description: 'Tags to help categorize blog post.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

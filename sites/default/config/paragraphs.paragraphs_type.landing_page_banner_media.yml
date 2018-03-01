@@ -1,0 +1,9 @@
+uuid: 1626c5c6-ba91-45a3-ac53-4f831d9cbd61
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_banner_media
+label: 'Header Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

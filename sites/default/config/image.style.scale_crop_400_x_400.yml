@@ -1,0 +1,14 @@
+uuid: 39402f41-3617-429a-9602-ee9864d55410
+langcode: en
+status: true
+dependencies: {  }
+name: scale_crop_400_x_400
+label: 'Scale Crop 400 x 400'
+effects:
+  3dc5cd88-da2b-4fa9-a8e9-1b1d9f10bcf7:
+    uuid: 3dc5cd88-da2b-4fa9-a8e9-1b1d9f10bcf7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400

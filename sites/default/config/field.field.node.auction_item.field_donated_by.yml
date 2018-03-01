@@ -1,0 +1,19 @@
+uuid: 1eb692ac-6602-4138-9b02-e87c9935d979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donated_by
+    - node.type.auction_item
+id: node.auction_item.field_donated_by
+field_name: field_donated_by
+entity_type: node
+bundle: auction_item
+label: 'Donated By'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

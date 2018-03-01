@@ -1,0 +1,20 @@
+uuid: 890171fb-32de-4f58-a5a1-12feaba61ebb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+id: ewb_auction_item_nodes
+label: 'EWB - Auction Item Nodes'
+code: ".view-auction-item-current-high-bid {\r\n  background-color:#ffe88c;\r\n  padding: 2em;\r\n  max-width:28rem;\r\n  border-radius: 8px;\r\n  margin-top:4rem;\r\n}\r\n#auction-details {\r\n   margin: auto;\r\n    width: 60%;\r\n}\r\n@media only screen and (min-width: 768px) {\r\n    /* For desktop: */\r\n#main-content {\r\n    min-height:800px;\r\n}\r\n.media-logo img {\r\n  margin-top:2rem;\r\n}\r\n}\r\n/*section#block-userlogin {*/\r\n/* position: absolute;*/\r\n/* min-width: 100%;*/\r\n/* min-height: 100vh;*/\r\n/* background: rgba(0,0,0,.5);*/\r\n/* padding: 5em 15em;*/\r\n/*}*/"
+media: all
+preprocess: true
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      auction_item: auction_item
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+conditions_require_all: true

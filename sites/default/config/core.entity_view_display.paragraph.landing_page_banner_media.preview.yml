@@ -1,0 +1,23 @@
+uuid: e3307ef1-3c25-45d8-af7e-afc1cc35bab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.landing_page_banner_media.field_banner_media
+    - paragraphs.paragraphs_type.landing_page_banner_media
+id: paragraph.landing_page_banner_media.preview
+targetEntityType: paragraph
+bundle: landing_page_banner_media
+mode: preview
+content:
+  field_banner_media:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

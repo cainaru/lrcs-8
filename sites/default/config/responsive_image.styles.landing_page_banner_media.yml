@@ -1,0 +1,22 @@
+uuid: 1869c83d-32c1-4a3d-bc3d-9cd41818091e
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large_screen_1200x424_
+    - image.style.medium_992x350_
+    - image.style.thumbnail
+id: landing_page_banner_media
+label: 'Landing Page Banner Media'
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - large_screen_1200x424_
+        - medium_992x350_
+breakpoint_group: responsive_image
+fallback_image_style: thumbnail

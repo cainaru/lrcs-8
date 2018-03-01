@@ -1,0 +1,22 @@
+uuid: 906df392-69a8-421d-b0df-4d29a6bdb170
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - lrcs_bootstrap
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: lrcs_bootstrap_help
+theme: lrcs_bootstrap
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: ce767948-b593-4652-ac07-9ed3c79a0f50
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: ewb_narrative_tweaks
+label: 'EWB - Narrative Tweaks'
+code: "/* these items moved to theme layer by nat\r\n.view-narrative-listing .card-item-teaser {\r\n  min-height: 360px;\r\n}\r\n\r\n.paragraph--type--breakout iframe {\r\n  display:block;\r\n  max-width:1200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n}\r\n.breakout {\r\n  margin-top:0;\r\n  margin-bottom:0;\r\n}\r\n.paragraph--type--breakout {\r\n    padding: 6rem 0;\r\n}\r\n.paragraph--type--content-reference .timeline {\r\n  max-width:1200px;\r\n  margin-left:auto;\r\n  margin-right:auto;\r\n}\r\n\r\n.paragraph--type--content-reference .timeline.referenced > h2 {\r\n  background: #f2f2f2;\r\n  margin: 0;\r\n  padding-bottom: .5em;\r\n  padding-top: .5em;\r\n  padding-left: 15px;\r\n  padding-right: 15px;\r\n}\r\n\r\n.paragraph--type--content-reference .timeline.referenced > h2 a {\r\n  color: #333;\r\n  text-decoration: none;\r\n}\r\n\r\n.paragraph--type--content-reference .timeline.referenced > h2 a:hover,\r\n.paragraph--type--content-reference .timeline.referenced > h2 a:focus {\r\n  text-decoration: underline;\r\n} */\r\n\r\n/*ewb to address the issue of having the timeline H2 looking garish*/\r\n/*.paragraph--type--content-reference h2 {*/\r\n/*    display:none;*/\r\n/*}*/\r\n"
+media: all
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      university_bootstrap: university_bootstrap
+    negate: false
+conditions_require_all: true

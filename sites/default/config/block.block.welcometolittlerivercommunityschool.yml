@@ -1,0 +1,35 @@
+uuid: 5129ded0-02e1-4979-838e-a385507bbc67
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:494f94c0-e4e2-4749-b412-dea8f68fd9b3'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - university_bootstrap
+third_party_settings:
+  block_class:
+    classes: centered-content
+id: welcometolittlerivercommunityschool
+theme: university_bootstrap
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:494f94c0-e4e2-4749-b412-dea8f68fd9b3'
+settings:
+  id: 'block_content:494f94c0-e4e2-4749-b412-dea8f68fd9b3'
+  label: 'Welcome to Little River Community School!'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

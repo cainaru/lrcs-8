@@ -1,0 +1,30 @@
+uuid: ee078d7f-d809-4d81-82ae-5e8f62643032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_auction_item_images
+    - media_entity.bundle.auction_item_image
+    - media_entity.bundle.image
+    - node.type.auction_item
+id: node.auction_item.field_auction_item_images
+field_name: field_auction_item_images
+entity_type: node
+bundle: auction_item
+label: 'Auction Item Images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      auction_item_image: auction_item_image
+      image: image
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: auction_item_image
+field_type: entity_reference

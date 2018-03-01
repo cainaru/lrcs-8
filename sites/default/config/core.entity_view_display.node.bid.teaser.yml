@@ -1,0 +1,22 @@
+uuid: 622f3752-0038-4569-994f-d67014bd265e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bid.field_auction_item
+    - field.field.node.bid.field_bid_amount
+    - node.type.bid
+  module:
+    - user
+id: node.bid.teaser
+targetEntityType: node
+bundle: bid
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_auction_item: true
+  field_bid_amount: true

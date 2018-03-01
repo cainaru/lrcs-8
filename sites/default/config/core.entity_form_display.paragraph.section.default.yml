@@ -1,0 +1,102 @@
+uuid: 8ab268fa-ae2f-45ad-9d56-8d737a856544
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_background_image
+    - field.field.paragraph.section.field_section_content
+    - field.field.paragraph.section.field_section_title
+    - field.field.paragraph.section.field_section_width
+    - field.field.paragraph.section.field_text_color
+    - field.field.paragraph.section.field_vertical_padding
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+    - field_group
+    - image
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_background:
+      children:
+        - field_background_color
+        - field_text_color
+        - field_background_image
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: Background
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Background
+      region: content
+id: paragraph.section.default
+targetEntityType: paragraph
+bundle: section
+mode: default
+content:
+  field_background_color:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_background_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_section_content:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Chunk
+      title_plural: Chunk
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_width:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_color:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_vertical_padding:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

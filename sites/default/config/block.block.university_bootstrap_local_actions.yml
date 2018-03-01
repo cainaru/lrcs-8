@@ -1,0 +1,20 @@
+uuid: 63afe96a-35a9-4a3a-b8ce-32ac445c46dc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - university_bootstrap
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: university_bootstrap_local_actions
+theme: university_bootstrap
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

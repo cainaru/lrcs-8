@@ -1,0 +1,10 @@
+uuid: 17bb9ddd-7afe-45eb-ac9e-fa37ea12ddd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media.landing_page_banner_media
+label: 'Landing Page Banner Media'
+targetEntityType: media
+cache: true

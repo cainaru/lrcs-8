@@ -1,0 +1,39 @@
+uuid: 88f8765f-2771-40ee-bcde-7159112c0efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.narrative.field_authorship
+    - field.field.node.narrative.field_banner_color
+    - field.field.node.narrative.field_banner_media_element
+    - field.field.node.narrative.field_paragraph_elements
+    - field.field.node.narrative.field_subtitle
+    - node.type.narrative
+  module:
+    - text
+    - user
+id: node.narrative.teaser
+targetEntityType: node
+bundle: narrative
+mode: teaser
+content:
+  field_subtitle:
+    type: text_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_authorship: true
+  field_banner_color: true
+  field_banner_media_element: true
+  field_paragraph_elements: true

@@ -1,0 +1,38 @@
+uuid: df2e1aed-3774-4f0a-b25a-57a2ea4a8187
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_auction_image
+    - media_entity.bundle.auction_item_image
+  module:
+    - image
+id: media.auction_item_image.field_auction_image
+field_name: field_auction_image
+entity_type: media
+bundle: auction_item_image
+label: 'Auction Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: auction_images
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,30 @@
+{% block footer %}
+<footer class="footer {{ container }}" role="contentinfo">
+  <div class="main-footer footer-top row">
+    <div class="container-fluid">
+      <div class="col-md-4">
+        {{ page.footer_first }}
+      </div>
+      <div class="col-md-4">
+        {{ page.footer_second }}
+      </div>
+      <div class="col-md-4">
+        {{ page.footer_third }}
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom row">
+    <div class="container-fluid">
+      <div class="col-md-6">
+        {{ page.footer_bottom_left }}
+        <div class="copyright">
+          <span>&copy; {{ now|date('Y') }} Little River School. All rights reserved.</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        {{ page.footer_bottom_right }}
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

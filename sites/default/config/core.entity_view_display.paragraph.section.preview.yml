@@ -1,0 +1,85 @@
+uuid: df95a2ed-9587-4cfe-8bc8-e2850f85cd92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.section.field_background_color
+    - field.field.paragraph.section.field_background_image
+    - field.field.paragraph.section.field_section_content
+    - field.field.paragraph.section.field_section_title
+    - field.field.paragraph.section.field_section_width
+    - field.field.paragraph.section.field_text_color
+    - field.field.paragraph.section.field_vertical_padding
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.section
+  module:
+    - color_field
+    - entity_reference_revisions
+    - image
+    - options
+id: paragraph.section.preview
+targetEntityType: paragraph
+bundle: section
+mode: preview
+content:
+  field_background_color:
+    type: color_field_formatter_text
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+  field_background_image:
+    type: image
+    weight: 4
+    region: content
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+  field_section_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+  field_section_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_section_width:
+    type: list_default
+    weight: 6
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_text_color:
+    type: list_default
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_vertical_padding:
+    type: boolean
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden: {  }

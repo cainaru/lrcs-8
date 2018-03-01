@@ -1,0 +1,23 @@
+uuid: 6fe2cf1b-412a-4820-b120-60c0043a2ae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_buy_it_now_price
+    - node.type.auction_item
+id: node.auction_item.field_buy_it_now_price
+field_name: field_buy_it_now_price
+entity_type: node
+bundle: auction_item
+label: 'Buy It Now Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

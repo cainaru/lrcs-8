@@ -1,0 +1,64 @@
+uuid: 5f9b563c-392c-4a19-9af9-a2714ada535d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_media_element
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.landing_page_banner_media
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_banner_media_element
+field_name: field_banner_media_element
+entity_type: node
+bundle: landing_page
+label: 'Header Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      landing_page_banner_media: landing_page_banner_media
+    target_bundles_drag_drop:
+      anchor:
+        weight: 12
+        enabled: false
+      aside:
+        weight: 13
+        enabled: false
+      banner_media:
+        weight: 14
+        enabled: false
+      breakout:
+        weight: 15
+        enabled: false
+      content_reference:
+        weight: 16
+        enabled: false
+      double:
+        weight: 17
+        enabled: false
+      heading:
+        weight: 18
+        enabled: false
+      media:
+        weight: 19
+        enabled: false
+      landing_page_banner_media:
+        enabled: true
+        weight: 20
+      media_carousel:
+        weight: 20
+        enabled: false
+      section:
+        weight: 21
+        enabled: false
+      text:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

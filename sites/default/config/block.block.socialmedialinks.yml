@@ -1,0 +1,116 @@
+uuid: 4df8225b-06ca-470c-bec3-072e66ab899d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - social_media_links
+  theme:
+    - university_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
+id: socialmedialinks
+theme: university_bootstrap
+region: footer
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    email:
+      value: ''
+      description: ''
+      weight: '-10'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-9'
+    twitter:
+      value: ''
+      description: ''
+      weight: '-8'
+    facebook:
+      value: littlerivercanton
+      description: ''
+      weight: '-7'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-6'
+    behance:
+      value: ''
+      description: ''
+      weight: '-5'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-4'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-3'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-2'
+    contact:
+      value: ''
+      description: ''
+      weight: '-1'
+    instagram:
+      value: littleriverschool/
+      description: ''
+      weight: '0'
+    rss:
+      value: ''
+      description: ''
+      weight: '1'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '2'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '3'
+    github:
+      value: ''
+      description: ''
+      weight: '4'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '5'
+    youtube:
+      value: ''
+      description: ''
+      weight: '6'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '7'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '8'
+    flickr:
+      value: ''
+      description: ''
+      weight: '9'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

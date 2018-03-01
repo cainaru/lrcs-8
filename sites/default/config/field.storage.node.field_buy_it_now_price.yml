@@ -1,0 +1,20 @@
+uuid: ed959459-0a8c-460a-81db-5430bccfe232
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_buy_it_now_price
+field_name: field_buy_it_now_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

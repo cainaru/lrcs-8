@@ -1,0 +1,22 @@
+uuid: 2e7dbc04-bde5-475b-9687-0b4674126f9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_image
+third_party_settings:
+  crop:
+    image_field: field_logo_image
+id: logo
+label: Logo
+description: 'Use for images of logos, for auctions, etc.'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_logo_image
+  gather_exif: false
+field_map:
+  width: field_width
+  height: field_height

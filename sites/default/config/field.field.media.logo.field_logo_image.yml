@@ -1,0 +1,38 @@
+uuid: da941cb5-a73d-4e2e-92e8-57e4c38693ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_logo_image
+    - media_entity.bundle.logo
+  module:
+    - image
+id: media.logo.field_logo_image
+field_name: field_logo_image
+entity_type: media
+bundle: logo
+label: 'Logo Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: logos
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: logo
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
