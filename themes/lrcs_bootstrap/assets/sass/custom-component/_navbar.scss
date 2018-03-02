@@ -16,10 +16,10 @@ body {
     margin-top: 0;
   }
   &.navbar-is-fixed-top {
-    margin-top: 59px;
+    margin-top: 5px;
 
     @media (min-width: $grid-float-breakpoint) {
-      margin-top: 86px;
+      margin-top: 110px;
     }
 
    &.navbar-has-university-brand {
@@ -121,6 +121,12 @@ body {
   line-height: 1.5;
 }
 
+.region-navigation-utility .navbar-nav, .region-navigation-utility .navbar-nav li a {
+  font-size: $h6-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 .navbar-nav {
   li > a {
     &:hover,
@@ -151,11 +157,11 @@ body {
 }
 
 .navbar-static-top {
-  border-width: 0 0 6px;
+  border-width: 0 0 3px;
 }
 
 .navbar-fixed-top {
-  border-width: 0 0 6px;
+  border-width: 0 0 3px;
 }
 
 .navbar-toggle {
@@ -193,13 +199,42 @@ body {
 
 .navbar {
   @media (min-width: $grid-float-breakpoint) {
-    padding-top: $line-height-computed;
+    padding-top: ($line-height-computed * 1.5);
+    padding-bottom: ($line-height-computed / 2);
   }
 }
 
-.navbar .navbar-collapse {
+.navbar-collapse {
+  border-width: 3px 0 0;
+}
+
+.navbar .region-navigation-collapsible {
   @media (min-width: $grid-float-breakpoint) {
     float: right;
+  }
+}
+
+.navbar .region-navigation-utility {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: $color-primary-darkest;
+
+  @media (min-width: $grid-float-breakpoint) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation-utility {
+    @media (min-width: $grid-float-breakpoint) {
+      float: right;
+    }
   }
 }
 
@@ -215,8 +250,46 @@ body {
 
 .navbar-default {
 
+  .region-navigation-utility .navbar-nav {
+
+    @media (min-width: $grid-float-breakpoint) {
+
+     li > a {
+        padding-top: calc(#{$navbar-padding-vertical} - 8px);
+        padding-bottom: calc(#{$navbar-padding-vertical} - 8px);
+      }
+    }
+
+    > li > a {
+      color: $color-cool-blue-lightest;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $navbar-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
 
   .navbar-nav {
+
     > .open > a {
       &,
       &:hover,

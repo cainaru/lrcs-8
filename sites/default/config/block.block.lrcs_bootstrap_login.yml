@@ -15,8 +15,8 @@ third_party_settings:
     classes: 'navbar-right navbar-nav'
 id: lrcs_bootstrap_login
 theme: lrcs_bootstrap
-region: navigation_collapsible
-weight: -7
+region: navigation_utility
+weight: -9
 provider: null
 plugin: 'system_menu_block:login'
 settings:

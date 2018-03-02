@@ -17,7 +17,7 @@ _core:
 id: lrcs_bootstrap_main_menu
 theme: lrcs_bootstrap
 region: navigation_collapsible
-weight: -9
+weight: -10
 provider: null
 plugin: 'system_menu_block:main'
 settings:

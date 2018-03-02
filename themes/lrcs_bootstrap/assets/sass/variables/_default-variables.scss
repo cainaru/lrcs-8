@@ -117,12 +117,13 @@ $input-height-small:             (floor($font-size-small * $line-height-small) +
 $form-group-margin-bottom:       18px !default;
 
 $navbar-height:                    $line-height-base * 3.6 * $font-unit !default;
+$navbar-margin-bottom:             0px !default;
 $navbar-border-radius:             0px;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2.25) !default;
 $navbar-collapse-max-height:       100% !default;
 
 $navbar-default-color:             $color-primary-darker !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-bg:                #ffffff !default;
 $navbar-default-border:            $color-primary-darker !default;
 
 // Navbar links

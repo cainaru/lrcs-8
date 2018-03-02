@@ -9,6 +9,7 @@ package: 'Bootstrap'
 regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_utility: 'Navigation (Utility)'
   header: 'Top Bar'
   highlighted: 'Highlighted'
   help: 'Help'
