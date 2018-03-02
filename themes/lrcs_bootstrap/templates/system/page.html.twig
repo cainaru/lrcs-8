@@ -63,7 +63,6 @@
   {% block navbar %}
     {%
       set navbar_classes = [
-        'university-navbar',
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
@@ -71,7 +70,7 @@
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       {% if not navbar_attributes.hasClass(container) %}
-        <div class="{{ container }}">
+        <div class="lrcs-content-container {{ container }}">
       {% endif %}
       <div class="navbar-header">
         {{ page.navigation }}
@@ -102,44 +101,15 @@
 {# Main #}
 {% block main %}
   <div role="main" id="main-content" class="university-layout-{{ template_type }} university-content main-container js-quickedit-main-content">
-  
-  {% if template_type == 'not-edge-to-edge' %}
-    <div class="university-layout-content-container {{ container }}">
-  {% else %}
-    <div class="{{ container }}">
-  {% endif %}
 
-      <div class="row">
-
-        {# Header #}
+    {# Header #}
         {% if page.header %}
           <div class="university-page-header col-sm-12" role="heading">
               {{ page.header }}
             </div>
         {% endif %}
 
-        {# Sidebar First #}
-        {% if page.sidebar_first %}
-          {% block sidebar_first %}
-            <aside class="university-sidebar col-sm-3" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          {% endblock %}
-        {% endif %}
-
-        {# Content #}
-        {%
-          set content_classes = [
-            'university-main-content',
-            page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-            page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-          ]
-        %}
-        <section{{ content_attributes.addClass(content_classes) }}>
-
-          {# Highlighted #}
+    {# Highlighted #}
           {% if page.highlighted %}
             {% block highlighted %}
               <div class="highlighted">{{ page.highlighted }}</div>
@@ -166,6 +136,35 @@
               {{ page.help }}
             {% endblock %}
           {% endif %}
+  
+  {% if template_type == 'not-edge-to-edge' %}
+    <div class="university-layout-content-container {{ container }}">
+  {% else %}
+    <div class="{{ container }}">
+  {% endif %}
+
+      <div class="row">
+
+        {# Sidebar First #}
+        {% if page.sidebar_first %}
+          {% block sidebar_first %}
+            <aside class="university-sidebar col-sm-3" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+          {% endblock %}
+        {% endif %}
+
+        {# Content #}
+        {%
+          set content_classes = [
+            'university-main-content',
+            page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+            page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+            page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+            page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+          ]
+        %}
+        <section{{ content_attributes.addClass(content_classes) }}>
 
           {# Content #}
           {% block content %}

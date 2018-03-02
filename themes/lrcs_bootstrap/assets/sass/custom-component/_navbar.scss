@@ -16,7 +16,12 @@ body {
     margin-top: 0;
   }
   &.navbar-is-fixed-top {
-    margin-top: 54px;
+    margin-top: 59px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-top: 86px;
+    }
+
    &.navbar-has-university-brand {
       margin-top: 82px;
     }
@@ -99,21 +104,6 @@ body {
 }
 
 // ========================================
-// University brand bar above main Navbar
-// ========================================
-.university-brand {
-  height: 28px;
-  width: 100%;
-  z-index: 1030;
-  background-color: $color-primary;
-
-  .university-scarlet & {
-    background-color: $color-brown;
-  }
-}
-
-
-// ========================================
 // Site name in main Navbar
 // ========================================
 .navbar-brand {
@@ -127,7 +117,7 @@ body {
 // ========================================
 .navbar-nav, .navbar-nav li a {
   font-size: $nav-font-size;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -140,6 +130,7 @@ body {
   }
 
   @media (min-width: $grid-float-breakpoint) {
+
    li > a {
       padding-top: calc(#{$navbar-padding-vertical} + 3px);
       padding-bottom: calc(#{$navbar-padding-vertical} + 3px);
@@ -157,6 +148,14 @@ body {
 .navbar .btn {
   margin-top: calc(#{$line-height-computed / 3} - 1.5px);
   margin-bottom: calc(#{$line-height-computed / 3} - 1.5px);
+}
+
+.navbar-static-top {
+  border-width: 0 0 6px;
+}
+
+.navbar-fixed-top {
+  border-width: 0 0 6px;
 }
 
 .navbar-toggle {
@@ -192,12 +191,76 @@ body {
   }
 }
 
+.navbar {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: $line-height-computed;
+  }
+}
 
+.navbar .navbar-collapse {
+  @media (min-width: $grid-float-breakpoint) {
+    float: right;
+  }
+}
+
+.navbar #block-lrcs-bootstrap-main-menu,
+.navbar #block-lrcs-bootstrap-account-menu {
+  display: inline;
+}
 
 
 // ========================================
 // Navbar colors
 // ========================================
+
+.navbar-default {
+
+
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
+      }
+    }
+
+    .open .dropdown-menu {
+      border-color: $navbar-default-border;
+
+        > .dropdown-header {
+          border-color: $navbar-default-border;
+        }
+        .divider {
+          background-color: $navbar-default-border;
+        }
+        > li > a {
+          color: $navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-hover-color;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+          }
+        }
+      }
+
+    
+  }
+}
 
 // Inverse navbar (default)
 
@@ -310,404 +373,4 @@ body {
   // Vertically center in expanded, horizontal navbar
   @include navbar-vertical-align(($input-height-base + 1.10rem));
 
-}
-
-// Alternate navbars
-
-.university-brown.navbar-default {
-  background-color: $university-brown-navbar-default-bg;
-  border-color: $university-brown-navbar-default-border;
-
-  .navbar-brand {
-    color: $university-brown-navbar-default-brand-color;
-    &:hover,
-    &:focus {
-      color: $university-brown-navbar-default-brand-hover-color;
-      background-color: $university-brown-navbar-default-brand-hover-bg;
-    }
-  }
-
-  .navbar-text {
-    color: $university-brown-navbar-default-color;
-  }
-
-  .navbar-nav {
-    > li > a {
-      color: $university-brown-navbar-default-link-color;
-
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-default-link-hover-color;
-        background-color: $university-brown-navbar-default-link-hover-bg;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-default-link-active-color;
-        background-color: $university-brown-navbar-default-link-active-bg;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-default-link-disabled-color;
-        background-color: $university-brown-navbar-default-link-disabled-bg;
-      }
-    }
-  }
-
-  .navbar-toggle {
-    border-color: $university-brown-navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $university-brown-navbar-default-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $university-brown-navbar-default-toggle-icon-bar-bg;
-    }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $university-brown-navbar-default-border;
-  }
-
-  // Dropdown menu items
-  .navbar-nav {
-    // Remove background color from open dropdown
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $university-brown-navbar-default-link-active-bg;
-        color: $university-brown-navbar-default-link-active-color;
-      }
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display when collapsed
-      .open .dropdown-menu {
-        > li > a {
-          color: $university-brown-navbar-default-link-color;
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-default-link-hover-color;
-            background-color: $university-brown-navbar-default-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-default-link-active-color;
-            background-color: $university-brown-navbar-default-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-default-link-disabled-color;
-            background-color: $university-brown-navbar-default-link-disabled-bg;
-          }
-        }
-      }
-    }
-  }
-
-
-  // Links in navbars
-  //
-  // Add a class to ensure links outside the navbar nav are colored correctly.
-
-  .navbar-link {
-    color: $university-brown-navbar-default-link-color;
-    &:hover {
-      color: $university-brown-navbar-default-link-hover-color;
-    }
-  }
-
-  .btn-link {
-    color: $university-brown-navbar-default-link-color;
-    &:hover,
-    &:focus {
-      color: $university-brown-navbar-default-link-hover-color;
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-default-link-disabled-color;
-      }
-    }
-  }
-}
-
-.university-brown.navbar-inverse {
-  background-color: $university-brown-navbar-inverse-bg;
-  border-color: $university-brown-navbar-inverse-border;
-
-  .navbar-brand {
-    color: $university-brown-navbar-inverse-brand-color;
-    &:hover,
-    &:focus {
-      color: $university-brown-navbar-inverse-brand-hover-color;
-      background-color: $university-brown-navbar-inverse-brand-hover-bg;
-    }
-  }
-
-  .navbar-text {
-    color: $university-brown-navbar-inverse-color;
-  }
-
-  .navbar-nav {
-    > li > a {
-      color: $university-brown-navbar-inverse-link-color;
-
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-inverse-link-hover-color;
-        background-color: $university-brown-navbar-inverse-link-hover-bg;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-inverse-link-active-color;
-        background-color: $university-brown-navbar-inverse-link-active-bg;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-inverse-link-disabled-color;
-        background-color: $university-brown-navbar-inverse-link-disabled-bg;
-      }
-    }
-  }
-
-  // Darken the responsive nav toggle
-  .navbar-toggle {
-    border-color: $university-brown-navbar-inverse-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $university-brown-navbar-inverse-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $university-brown-navbar-inverse-toggle-icon-bar-bg;
-    }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: darken($university-brown-navbar-inverse-bg, 7%);
-  }
-
-  // Dropdowns
-  .navbar-nav {
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $university-brown-navbar-inverse-link-active-bg;
-        color: $university-brown-navbar-inverse-link-active-color;
-      }
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display
-      .open .dropdown-menu {
-        > .dropdown-header {
-          border-color: $university-brown-navbar-inverse-border;
-        }
-        .divider {
-          background-color: $university-brown-navbar-inverse-border;
-        }
-        > li > a {
-          color: $university-brown-navbar-inverse-link-color;
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-inverse-link-hover-color;
-            background-color: $university-brown-navbar-inverse-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-inverse-link-active-color;
-            background-color: $university-brown-navbar-inverse-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-brown-navbar-inverse-link-disabled-color;
-            background-color: $university-brown-navbar-inverse-link-disabled-bg;
-          }
-        }
-      }
-    }
-  }
-
-  .navbar-link {
-    color: $university-brown-navbar-inverse-link-color;
-    &:hover {
-      color: $university-brown-navbar-inverse-link-hover-color;
-    }
-  }
-
-  .btn-link {
-    color: $university-brown-navbar-inverse-link-color;
-    &:hover,
-    &:focus {
-      color: $university-brown-navbar-inverse-link-hover-color;
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $university-brown-navbar-inverse-link-disabled-color;
-      }
-    }
-  }
-}
-
-.university-scarlet.navbar-inverse {
-  background-color: $university-scarlet-navbar-inverse-bg;
-  border-color: $university-scarlet-navbar-inverse-border;
-
-  .navbar-brand {
-    color: $university-scarlet-navbar-inverse-brand-color;
-    &:hover,
-    &:focus {
-      color: $university-scarlet-navbar-inverse-brand-hover-color;
-      background-color: $university-scarlet-navbar-inverse-brand-hover-bg;
-    }
-  }
-
-  .navbar-text {
-    color: $university-scarlet-navbar-inverse-color;
-  }
-
-  .navbar-nav {
-    > li > a {
-      color: $university-scarlet-navbar-inverse-link-color;
-
-      &:hover,
-      &:focus {
-        color: $university-scarlet-navbar-inverse-link-hover-color;
-        background-color: $university-scarlet-navbar-inverse-link-hover-bg;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-scarlet-navbar-inverse-link-active-color;
-        background-color: $university-scarlet-navbar-inverse-link-active-bg;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $university-scarlet-navbar-inverse-link-disabled-color;
-        background-color: $university-scarlet-navbar-inverse-link-disabled-bg;
-      }
-    }
-  }
-
-  // Darken the responsive nav toggle
-  .navbar-toggle {
-    border-color: $university-scarlet-navbar-inverse-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $university-scarlet-navbar-inverse-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $university-scarlet-navbar-inverse-toggle-icon-bar-bg;
-    }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: darken($university-scarlet-navbar-inverse-bg, 7%);
-  }
-
-  // Dropdowns
-  .navbar-nav {
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $university-scarlet-navbar-inverse-link-active-bg;
-        color: $university-scarlet-navbar-inverse-link-active-color;
-      }
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display
-      .open .dropdown-menu {
-        > .dropdown-header {
-          border-color: $university-scarlet-navbar-inverse-border;
-        }
-        .divider {
-          background-color: $university-scarlet-navbar-inverse-border;
-        }
-        > li > a {
-          color: $university-scarlet-navbar-inverse-link-color;
-          &:hover,
-          &:focus {
-            color: $university-scarlet-navbar-inverse-link-hover-color;
-            background-color: $university-scarlet-navbar-inverse-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-scarlet-navbar-inverse-link-active-color;
-            background-color: $university-scarlet-navbar-inverse-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $university-scarlet-navbar-inverse-link-disabled-color;
-            background-color: $university-scarlet-navbar-inverse-link-disabled-bg;
-          }
-        }
-      }
-    }
-  }
-
-  .navbar-link {
-    color: $university-scarlet-navbar-inverse-link-color;
-    &:hover {
-      color: $university-scarlet-navbar-inverse-link-hover-color;
-    }
-  }
-
-  .btn-link {
-    color: $university-scarlet-navbar-inverse-link-color;
-    &:hover,
-    &:focus {
-      color: $university-scarlet-navbar-inverse-link-hover-color;
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $university-scarlet-navbar-inverse-link-disabled-color;
-      }
-    }
-  }
 }

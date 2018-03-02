@@ -20,7 +20,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#33455B, 1%);
+$brand-primary:         $color-primary;
 $brand-success:         adjust-hue(#8D984C, 20%);
 $brand-info:            #4E8CAB;
 $brand-warning:         #F2C200;
@@ -121,15 +121,15 @@ $navbar-border-radius:             0px;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2.25) !default;
 $navbar-collapse-max-height:       100% !default;
 
-$navbar-default-color:             #333 !default;
+$navbar-default-color:             $color-primary-darker !default;
 $navbar-default-bg:                #f8f8f8 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-border:            $color-primary-darker !default;
 
 // Navbar links
 $navbar-default-link-color:                $navbar-default-color !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-hover-color:          $color-primary !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #222 !default;
+$navbar-default-link-active-color:         $color-primary !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
@@ -141,7 +141,7 @@ $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-icon-bar-bg:        $color-primary-darker !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
 $navbar-inverse-color:                      #fff;
@@ -150,76 +150,6 @@ $navbar-inverse-link-hover-color:           #fff;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-brand-color:                $navbar-inverse-link-color;
 $navbar-inverse-brand-hover-color:          #fff;
-
-$university-brown-navbar-default-color:             $color-brown !default;
-$university-brown-navbar-default-bg:                #f8f8f8 !default;
-$university-brown-navbar-default-border:            darken($university-brown-navbar-default-bg, 6.5%) !default;
-
-// Navbar links
-$university-brown-navbar-default-link-color:                $color-brown !default;
-$university-brown-navbar-default-link-hover-color:          #333 !default;
-$university-brown-navbar-default-link-hover-bg:             transparent !default;
-$university-brown-navbar-default-link-active-color:         darken($color-brown, 2%) !default;
-$university-brown-navbar-default-link-active-bg:            darken($university-brown-navbar-default-bg, 6.5%) !default;
-$university-brown-navbar-default-link-disabled-color:       #ccc !default;
-$university-brown-navbar-default-link-disabled-bg:          transparent !default;
-
-// Navbar brand label
-$university-brown-navbar-default-brand-color:               $university-brown-navbar-default-link-color !default;
-$university-brown-navbar-default-brand-hover-color:         darken($university-brown-navbar-default-brand-color, 10%) !default;
-$university-brown-navbar-default-brand-hover-bg:            transparent !default;
-
-// Navbar toggle
-$university-brown-navbar-default-toggle-hover-bg:           #ddd !default;
-$university-brown-navbar-default-toggle-icon-bar-bg:        #888 !default;
-$university-brown-navbar-default-toggle-border-color:       #ddd !default;
-
-$university-brown-navbar-inverse-color:                      #fff !default;
-$university-brown-navbar-inverse-bg:                         $color-brown !default;
-$university-brown-navbar-inverse-border:                     darken($university-brown-navbar-inverse-bg, 10%) !default;
-
-// Inverted navbar links
-$university-brown-navbar-inverse-link-color:                 #fff !default;
-$university-brown-navbar-inverse-link-hover-color:           #fff !default;
-$university-brown-navbar-inverse-link-hover-bg:              transparent !default;
-$university-brown-navbar-inverse-link-active-color:          $university-brown-navbar-inverse-link-hover-color !default;
-$university-brown-navbar-inverse-link-active-bg:             darken($university-brown-navbar-inverse-bg, 10%) !default;
-$university-brown-navbar-inverse-link-disabled-color:        #444 !default;
-$university-brown-navbar-inverse-link-disabled-bg:           transparent !default;
-
-// Inverted navbar brand label
-$university-brown-navbar-inverse-brand-color:                $university-brown-navbar-inverse-link-color !default;
-$university-brown-navbar-inverse-brand-hover-color:          #fff !default;
-$university-brown-navbar-inverse-brand-hover-bg:             transparent !default;
-
-// Inverted navbar toggle
-$university-brown-navbar-inverse-toggle-hover-bg:            #333 !default;
-$university-brown-navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$university-brown-navbar-inverse-toggle-border-color:        #333 !default;
-
-// Reset inverted navbar basics
-$university-scarlet-navbar-inverse-color:                      #fff !default;
-$university-scarlet-navbar-inverse-bg:                         $color-red !default;
-$university-scarlet-navbar-inverse-border:                     darken($university-scarlet-navbar-inverse-bg, 10%) !default;
-
-// Inverted navbar links
-$university-scarlet-navbar-inverse-link-color:                 #fff !default;
-$university-scarlet-navbar-inverse-link-hover-color:           #fff !default;
-$university-scarlet-navbar-inverse-link-hover-bg:              transparent !default;
-$university-scarlet-navbar-inverse-link-active-color:          $university-scarlet-navbar-inverse-link-hover-color !default;
-$university-scarlet-navbar-inverse-link-active-bg:             darken($university-scarlet-navbar-inverse-bg, 10%) !default;
-$university-scarlet-navbar-inverse-link-disabled-color:        #444 !default;
-$university-scarlet-navbar-inverse-link-disabled-bg:           transparent !default;
-
-// Inverted navbar brand label
-$university-scarlet-navbar-inverse-brand-color:                $university-scarlet-navbar-inverse-link-color !default;
-$university-scarlet-navbar-inverse-brand-hover-color:          #fff !default;
-$university-scarlet-navbar-inverse-brand-hover-bg:             transparent !default;
-
-// Inverted navbar toggle
-$university-scarlet-navbar-inverse-toggle-hover-bg:            #333 !default;
-$university-scarlet-navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$university-scarlet-navbar-inverse-toggle-border-color:        #333 !default;
 
 $pagination-color:                     $btn-default-color !default;
 $pagination-bg:                        $btn-default-bg !default;
