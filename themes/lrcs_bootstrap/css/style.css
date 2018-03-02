@@ -6319,7 +6319,7 @@ tbody.collapse.in {
       margin-right: 0; } }
 .navbar-default {
   background-color: #ffffff;
-  border-color: #205493; }
+  border-color: #ddd; }
   .navbar-default .navbar-brand {
     color: #205493; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -6346,7 +6346,7 @@ tbody.collapse.in {
       background-color: #205493; }
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
-    border-color: #205493; }
+    border-color: #ddd; }
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #eeeeee;
     color: #0071bc; }
@@ -8831,10 +8831,10 @@ body {
   body.navbar-is-static-top {
     margin-top: 0; }
   body.navbar-is-fixed-top {
-    margin-top: 5px; }
+    margin-top: 54px; }
     @media (min-width: 768px) {
       body.navbar-is-fixed-top {
-        margin-top: 110px; } }
+        margin-top: 108px; } }
     body.navbar-is-fixed-top.navbar-has-university-brand {
       margin-top: 82px; }
   body.navbar-is-fixed-bottom {
@@ -8912,10 +8912,10 @@ body {
   margin-bottom: calc(0.9rem - 1.5px); }
 
 .navbar-static-top {
-  border-width: 0 0 3px; }
+  border-width: 0 0 1px; }
 
 .navbar-fixed-top {
-  border-width: 0 0 3px; }
+  border-width: 0 0 1px; }
 
 .navbar-toggle {
   position: relative;
@@ -8947,7 +8947,7 @@ body {
     padding-bottom: 1.35rem; } }
 
 .navbar-collapse {
-  border-width: 3px 0 0; }
+  border-width: 1px 0 0; }
 
 @media (min-width: 768px) {
   .navbar .region-navigation-collapsible {
@@ -8995,11 +8995,11 @@ body {
   background-color: #eeeeee;
   color: #0071bc; }
 .navbar-default .navbar-nav .open .dropdown-menu {
-  border-color: #205493; }
+  border-color: #ddd; }
   .navbar-default .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #205493; }
+    border-color: #ddd; }
   .navbar-default .navbar-nav .open .dropdown-menu .divider {
-    background-color: #205493; }
+    background-color: #ddd; }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #205493; }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {

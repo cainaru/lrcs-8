@@ -86,7 +86,46 @@
       {# Create block to render again later #}
       {% block header %}
 
-        <div class="page-header-wrapper">
+        {# 
+          Modifies classes in page-header-wrapper div depending on if there is featured media or not
+          Disclaimer: this is super messy.. there's gotta be a better way but I couldn't figure it out 
+        #}
+
+        {# Checks if full-width featured media/banner media/hero media paragraph #}
+        {% if node.field_banner_media_element is not empty %}
+
+          {# Checks which display option is selected #}
+          {% if content.field_banner_media_element.0['#paragraph'].field_display_options.value == '1' %}
+
+            {# 
+              if full-width then page title overlayed on featured media/banner media/hero media when screen
+              larger than 768px 
+            #}
+            <div class="page-header-wrapper has-featured-media full-width">
+          {% elseif content.field_banner_media_element.0['#paragraph'].field_display_options.value == '2' %}
+            
+            {# if not full-width then featured media/banner media/hero media rendered below page title #}
+            <div class="page-header-wrapper has-featured-media not-full-width">
+          {% endif %}
+
+        {# 
+          Checks if narrative content type and if featured media/banner media/hero media paragraph is empty, 
+          renders background color if it is empty 
+        #}
+
+        {% elseif node.getType == 'narrative' and node.field_banner_media_element is empty %}
+          <div class="page-header-wrapper no-featured-media" style="background-color:{{ node.field_banner_color.color }};">
+        {% else %}
+          <div class="page-header-wrapper">
+        {% endif %}
+
+        {# Renders full-width featured media/banner media/hero media paragraph #}
+        {% if node.field_banner_media_element and content.field_banner_media_element.0['#paragraph'].field_display_options.value == '1' %}
+          <div class="featured-media row clearfix">
+            {{ content.field_banner_media_element }}
+          </div>
+        {% endif %}
+
           <div class="page-header-content-container">
           {% block moderation_stat %}
             {% if node.moderation_state and node.moderation_state.value != 'published' %}
@@ -118,6 +157,14 @@
               {{ content.field_authorship }}
             {% endif %}
           </div>
+
+          {# Renders not full-width featured media/banner media/hero media paragraph #}
+          {% if node.field_banner_media_element and content.field_banner_media_element.0['#paragraph'].field_display_options.value == '2' %}
+            <div class="featured-media clearfix">
+              {{ content.field_banner_media_element }}
+            </div>
+          {% endif %}
+
         </div>
       {% endblock %}
     {% elseif not page and view_mode == 'referenced' %}
