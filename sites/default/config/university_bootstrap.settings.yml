@@ -1,0 +1,26 @@
+cdn_provider: ''
+fluid_container: 1
+navbar_position: fixed-top
+navbar_inverse: 1
+_core:
+  default_config_hash: q4VpsXMvVG3ARGAeBErcy7l4zYK2dZl8TqGcAfpCqT0
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://localhost:8888/pantheon/refashioning-fashion/themes/university_bootstrap/favicon.ico'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  university_bootstrap: 8000
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true
+table_responsive: '-1'
+university_bootstrap_brand_bar: 0
+table: ''

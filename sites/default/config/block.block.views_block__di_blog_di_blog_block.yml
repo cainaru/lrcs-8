@@ -1,0 +1,36 @@
+uuid: 62097e57-cef6-47a8-8510-14f4d6f888ea
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.di_blog
+  module:
+    - block_class
+    - ctools
+    - views
+  theme:
+    - university_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__di_blog_di_blog_block
+theme: university_bootstrap
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_block:di_blog-di_blog_block'
+settings:
+  id: 'views_block:di_blog-di_blog_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      di_blog_post: di_blog_post
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

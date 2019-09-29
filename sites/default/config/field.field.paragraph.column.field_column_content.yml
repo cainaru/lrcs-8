@@ -1,0 +1,80 @@
+uuid: 94cc2cd2-6acf-41d5-89f1-2312f52a5553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_content
+    - paragraphs.paragraphs_type.anchor
+    - paragraphs.paragraphs_type.column
+    - paragraphs.paragraphs_type.content_reference
+    - paragraphs.paragraphs_type.heading
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.media_carousel
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.column.field_column_content
+field_name: field_column_content
+entity_type: paragraph
+bundle: column
+label: 'Column Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      heading: heading
+      text: text
+      media: media
+      media_carousel: media_carousel
+      content_reference: content_reference
+      anchor: anchor
+    target_bundles_drag_drop:
+      heading:
+        enabled: true
+        weight: -29
+      text:
+        enabled: true
+        weight: -28
+      media:
+        enabled: true
+        weight: -27
+      media_carousel:
+        enabled: true
+        weight: -26
+      content_reference:
+        enabled: true
+        weight: -25
+      anchor:
+        enabled: true
+        weight: -24
+      aside:
+        weight: -23
+        enabled: false
+      banner_media:
+        weight: -22
+        enabled: false
+      breakout:
+        weight: -21
+        enabled: false
+      column:
+        weight: -20
+        enabled: false
+      double:
+        weight: -19
+        enabled: false
+      landing_page_banner_media:
+        weight: -18
+        enabled: false
+      row:
+        weight: -17
+        enabled: false
+      section:
+        weight: -16
+        enabled: false
+field_type: entity_reference_revisions

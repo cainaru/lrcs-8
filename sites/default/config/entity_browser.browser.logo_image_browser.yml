@@ -1,0 +1,42 @@
+uuid: 21be383d-c5b6-4e8e-b004-e850a5dfda5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.logo_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: logo_image_browser
+label: 'Logo Image Browser'
+display: modal
+display_configuration:
+  width: '1070'
+  height: '840'
+  link_text: 'Select logos'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  50bdb234-979f-4bbd-a397-14ccb5788e6c:
+    settings:
+      view: logo_media_browser
+      view_display: entity_browser_1
+      submit_text: 'Select logo'
+      auto_select: false
+    uuid: 50bdb234-979f-4bbd-a397-14ccb5788e6c
+    weight: 1
+    label: 'All Logo Images'
+    id: view
+  cc9b4997-e2cc-4541-af06-4198ffeb0f8f:
+    settings:
+      entity_type: media
+      bundle: logo
+      form_mode: default
+      submit_text: 'Save entity'
+    uuid: cc9b4997-e2cc-4541-af06-4198ffeb0f8f
+    weight: 2
+    label: 'Add Logo Image'
+    id: entity_form

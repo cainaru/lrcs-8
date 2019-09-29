@@ -1,0 +1,32 @@
+uuid: 7bb2aa26-2b9b-4700-8e32-ee74b73d3098
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+    - user
+  theme:
+    - lrcs_bootstrap
+third_party_settings:
+  block_class:
+    classes: auction-login
+id: lrcs_bootstrap_userlogin
+theme: lrcs_bootstrap
+region: sidebar_first
+weight: -10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Create an Account or Login to Bid'
+  provider: user
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      auction_item: auction_item
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

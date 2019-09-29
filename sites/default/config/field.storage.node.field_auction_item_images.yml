@@ -1,0 +1,20 @@
+uuid: 115f7f69-3401-4f2e-9a9d-50210447fdd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+    - node
+id: node.field_auction_item_images
+field_name: field_auction_item_images
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

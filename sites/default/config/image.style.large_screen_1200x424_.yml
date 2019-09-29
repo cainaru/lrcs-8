@@ -1,0 +1,17 @@
+uuid: c80e647b-93da-40b1-bd54-0a718a7c6224
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: large_screen_1200x424_
+label: 'Large Screen (1200x424)'
+effects:
+  d23e90e2-ca28-4c3d-9ec9-67a5c25234c3:
+    uuid: d23e90e2-ca28-4c3d-9ec9-67a5c25234c3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 424
+      crop_type: focal_point

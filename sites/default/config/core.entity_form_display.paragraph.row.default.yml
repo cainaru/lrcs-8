@@ -1,0 +1,33 @@
+uuid: ddcbd97f-5b9a-454d-9948-283f0073c3e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.row.field_columns
+    - paragraphs.paragraphs_type.row
+  module:
+    - paragraphs
+id: paragraph.row.default
+targetEntityType: paragraph
+bundle: row
+mode: default
+content:
+  field_columns:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Column
+      title_plural: Columns
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: column
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

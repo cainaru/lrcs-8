@@ -1,0 +1,22 @@
+uuid: 92250cf7-dad7-4c30-8d39-a36bf1fc024d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: auction_items
+label: 'Auction Items'
+type: 'canonical_entities:node'
+pattern: 'auction-item/[node:title]'
+selection_criteria:
+  49f6fe8c-9dc2-404b-9c76-6fd166f555e5:
+    id: node_type
+    bundles:
+      auction_item: auction_item
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 49f6fe8c-9dc2-404b-9c76-6fd166f555e5
+selection_logic: and
+weight: -5
+relationships: {  }

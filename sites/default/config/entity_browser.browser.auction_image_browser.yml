@@ -1,0 +1,42 @@
+uuid: c10506f4-b7e9-4595-855b-69c219e880c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.auction_media_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: auction_image_browser
+label: auction_image_browser
+display: modal
+display_configuration:
+  width: '1070'
+  height: '840'
+  link_text: 'Select auction image'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  2fcee6e9-e3b6-476c-b1e3-b33620231a9b:
+    settings:
+      view: auction_media_browser
+      view_display: entity_browser_1
+      submit_text: 'Select auction image'
+      auto_select: false
+    uuid: 2fcee6e9-e3b6-476c-b1e3-b33620231a9b
+    weight: 1
+    label: 'All Auction Images'
+    id: view
+  0532362b-283e-4de6-a7e4-c445c8026bce:
+    settings:
+      entity_type: media
+      bundle: auction_item_image
+      form_mode: default
+      submit_text: 'Save entity'
+    uuid: 0532362b-283e-4de6-a7e4-c445c8026bce
+    weight: 2
+    label: 'Add Auction Image'
+    id: entity_form

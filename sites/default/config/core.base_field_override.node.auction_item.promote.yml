@@ -1,0 +1,22 @@
+uuid: 38a8435f-665e-4015-be8a-6bbe6b631c92
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.auction_item
+id: node.auction_item.promote
+field_name: promote
+entity_type: node
+bundle: auction_item
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

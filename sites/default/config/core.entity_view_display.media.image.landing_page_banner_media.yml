@@ -1,0 +1,34 @@
+uuid: 268c4978-171b-49ec-bfad-a79e0e27add7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.landing_page_banner_media
+    - field.field.media.image.field_height
+    - field.field.media.image.field_image
+    - field.field.media.image.field_width
+    - media_entity.bundle.image
+    - responsive_image.styles.landing_page_banner_media
+  module:
+    - responsive_image
+id: media.image.landing_page_banner_media
+targetEntityType: media
+bundle: image
+mode: landing_page_banner_media
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: landing_page_banner_media
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  field_height: true
+  field_width: true
+  name: true
+  thumbnail: true
+  uid: true

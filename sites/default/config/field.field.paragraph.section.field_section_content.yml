@@ -1,0 +1,86 @@
+uuid: 25a9f848-fd9f-4a2d-a937-3efd956282d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_content
+    - paragraphs.paragraphs_type.anchor
+    - paragraphs.paragraphs_type.aside
+    - paragraphs.paragraphs_type.content_reference
+    - paragraphs.paragraphs_type.double
+    - paragraphs.paragraphs_type.heading
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.media_carousel
+    - paragraphs.paragraphs_type.row
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_section_content
+field_name: field_section_content
+entity_type: paragraph
+bundle: section
+label: 'Section Content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      heading: heading
+      text: text
+      media: media
+      media_carousel: media_carousel
+      content_reference: content_reference
+      aside: aside
+      double: double
+      row: row
+      anchor: anchor
+    target_bundles_drag_drop:
+      heading:
+        enabled: true
+        weight: -29
+      text:
+        enabled: true
+        weight: -28
+      media:
+        enabled: true
+        weight: -27
+      media_carousel:
+        enabled: true
+        weight: -26
+      content_reference:
+        enabled: true
+        weight: -25
+      aside:
+        enabled: true
+        weight: -24
+      double:
+        enabled: true
+        weight: -23
+      row:
+        enabled: true
+        weight: -22
+      anchor:
+        enabled: true
+        weight: -21
+      banner_media:
+        weight: -20
+        enabled: false
+      breakout:
+        weight: -19
+        enabled: false
+      column:
+        weight: -18
+        enabled: false
+      landing_page_banner_media:
+        weight: -17
+        enabled: false
+      section:
+        weight: -16
+        enabled: false
+field_type: entity_reference_revisions

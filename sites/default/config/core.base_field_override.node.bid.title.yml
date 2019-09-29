@@ -1,0 +1,18 @@
+uuid: 7cf115ad-766f-419f-9fb3-153e4ad349e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bid
+id: node.bid.title
+field_name: title
+entity_type: node
+bundle: bid
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

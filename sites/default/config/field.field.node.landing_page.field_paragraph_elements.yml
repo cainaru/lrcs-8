@@ -1,0 +1,64 @@
+uuid: 361e2b2d-043d-4889-b3ee-6900c7f75cb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_elements
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.section
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_paragraph_elements
+field_name: field_paragraph_elements
+entity_type: node
+bundle: landing_page
+label: 'Main Content Elements'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      section: section
+    target_bundles_drag_drop:
+      anchor:
+        weight: 13
+        enabled: false
+      aside:
+        weight: 14
+        enabled: false
+      banner_media:
+        weight: 15
+        enabled: false
+      breakout:
+        weight: 16
+        enabled: false
+      content_reference:
+        weight: 17
+        enabled: false
+      double:
+        weight: 18
+        enabled: false
+      heading:
+        weight: 19
+        enabled: false
+      landing_page_banner_media:
+        weight: 20
+        enabled: false
+      media:
+        weight: 21
+        enabled: false
+      media_carousel:
+        weight: 22
+        enabled: false
+      section:
+        enabled: true
+        weight: 23
+      text:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

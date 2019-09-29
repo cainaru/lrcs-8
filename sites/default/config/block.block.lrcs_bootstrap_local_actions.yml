@@ -1,0 +1,20 @@
+uuid: fca6b77f-7531-49ac-8ed3-2c8662b42f48
+langcode: en
+status: true
+dependencies:
+  theme:
+    - lrcs_bootstrap
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: lrcs_bootstrap_local_actions
+theme: lrcs_bootstrap
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

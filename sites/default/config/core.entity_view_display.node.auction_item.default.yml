@@ -1,0 +1,146 @@
+uuid: 0c6d718c-c8ca-475a-a3fa-0e00b207aea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.auction_item.body
+    - field.field.node.auction_item.field_auction_item_images
+    - field.field.node.auction_item.field_buy_it_now_price
+    - field.field.node.auction_item.field_donated_by
+    - field.field.node.auction_item.field_logo
+    - field.field.node.auction_item.field_value
+    - field.field.node.auction_item.field_website
+    - node.type.auction_item
+  module:
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - links
+        - body
+        - auction_item_current_high_bid_entity_view_1
+        - field_buy_it_now_price
+        - field_value
+        - field_donated_by
+        - field_website
+        - field_logo
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: auction-details
+        classes: 'col-md-6 col-sm-12'
+      label: Content
+      region: content
+    group_aside:
+      children:
+        - field_auction_item_images
+      parent_name: ''
+      weight: 8
+      format_type: html_element
+      format_settings:
+        label: aside
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-md-6 col-sm-12'
+      label: aside
+      region: content
+id: node.auction_item.default
+targetEntityType: node
+bundle: auction_item
+mode: default
+content:
+  auction_item_current_high_bid_entity_view_1:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_auction_item_images:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_buy_it_now_price:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_donated_by:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_logo:
+    weight: 8
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_value:
+    weight: 5
+    label: inline
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_website:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,35 @@
+uuid: c77026f6-56e8-4601-8da1-6eeada28ed0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.referenced
+    - field.field.node.di_blog_post.body
+    - field.field.node.di_blog_post.field_di_blog_comments
+    - field.field.node.di_blog_post.field_di_blog_tags
+    - node.type.di_blog_post
+  module:
+    - text
+    - user
+id: node.di_blog_post.referenced
+targetEntityType: node
+bundle: di_blog_post
+mode: referenced
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_di_blog_comments: true
+  field_di_blog_tags: true

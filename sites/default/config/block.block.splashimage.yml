@@ -1,0 +1,35 @@
+uuid: acd397f1-160e-4bc2-b8e6-a5cbdd808f74
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ff330288-54e6-4d19-a8ec-2467c34a7b58'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - university_bootstrap
+third_party_settings:
+  block_class:
+    classes: 'row clearfix color-blue-dark featured-section'
+id: splashimage
+theme: university_bootstrap
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:ff330288-54e6-4d19-a8ec-2467c34a7b58'
+settings:
+  id: 'block_content:ff330288-54e6-4d19-a8ec-2467c34a7b58'
+  label: 'Splash Image'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

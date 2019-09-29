@@ -1,0 +1,22 @@
+uuid: 2a2b4f17-8ee8-4acf-aff1-d301d79c42ce
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - university_bootstrap
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: university_bootstrap_powered
+theme: university_bootstrap
+region: footer
+weight: -5
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

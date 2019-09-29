@@ -1,0 +1,32 @@
+uuid: 93a3ba2f-e901-4f72-bb20-a24e079ce54f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+    - user
+  theme:
+    - university_bootstrap
+third_party_settings:
+  block_class:
+    classes: auction-login
+id: userlogin
+theme: university_bootstrap
+region: sidebar_first
+weight: -10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'Create an Account or Login to Bid'
+  provider: user
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      auction_item: auction_item
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,30 @@
+uuid: f73d5cfd-a5be-40e9-b077-b6b8a8f1039e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.auction_item_image.field_auction_image
+    - image.style.extra_small_screen_480x270_
+    - media_entity.bundle.auction_item_image
+  module:
+    - image
+id: media.auction_item_image.preview
+targetEntityType: media
+bundle: auction_item_image
+mode: preview
+content:
+  field_auction_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: extra_small_screen_480x270_
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

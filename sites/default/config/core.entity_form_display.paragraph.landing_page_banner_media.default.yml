@@ -1,0 +1,34 @@
+uuid: 2f99051f-3fee-4bfc-9dcb-d3592866667b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.modal_media_entity_browser
+    - field.field.paragraph.landing_page_banner_media.field_banner_media
+    - paragraphs.paragraphs_type.landing_page_banner_media
+  module:
+    - entity_browser
+id: paragraph.landing_page_banner_media.default
+targetEntityType: paragraph
+bundle: landing_page_banner_media
+mode: default
+content:
+  field_banner_media:
+    weight: 0
+    settings:
+      entity_browser: modal_media_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_prepend
+      field_widget_display_settings:
+        view_mode: preview
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  status: true
+  uid: true

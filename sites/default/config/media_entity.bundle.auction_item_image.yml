@@ -1,0 +1,20 @@
+uuid: 2c21d484-137e-4898-9939-bb6a59752ed3
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_image
+third_party_settings:
+  crop:
+    image_field: _none
+id: auction_item_image
+label: 'Auction Item Image'
+description: 'For auction items'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_auction_image
+  gather_exif: false
+field_map: {  }

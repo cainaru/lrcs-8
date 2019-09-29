@@ -1,0 +1,21 @@
+uuid: 34c224dc-74a7-4eda-a00c-8493401da894
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.anchor.field_anchor_label
+    - paragraphs.paragraphs_type.anchor
+id: paragraph.anchor.default
+targetEntityType: paragraph
+bundle: anchor
+mode: default
+content:
+  field_anchor_label:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

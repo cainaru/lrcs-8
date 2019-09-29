@@ -1,0 +1,17 @@
+uuid: 7918810a-9256-4e4e-9794-2483f95859d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Blog post'
+type: di_blog_post
+description: 'Use for multi-user blogs. Every user gets a personal blog.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

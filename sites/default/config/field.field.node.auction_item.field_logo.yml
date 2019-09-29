@@ -1,0 +1,28 @@
+uuid: fd6a57c8-6966-4d72-81f8-0a3cf7f494ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo
+    - media_entity.bundle.logo
+    - node.type.auction_item
+id: node.auction_item.field_logo
+field_name: field_logo
+entity_type: node
+bundle: auction_item
+label: Logo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      logo: logo
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

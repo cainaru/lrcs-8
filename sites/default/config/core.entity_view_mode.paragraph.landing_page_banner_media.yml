@@ -1,0 +1,10 @@
+uuid: 9472efa2-823f-4aa9-b926-5c586b218f66
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.landing_page_banner_media
+label: 'Landing Page Banner Media'
+targetEntityType: paragraph
+cache: true

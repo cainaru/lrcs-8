@@ -1,0 +1,23 @@
+uuid: 72b74af5-9e6e-41a7-88ad-1d8afd4377d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_value
+    - node.type.auction_item
+id: node.auction_item.field_value
+field_name: field_value
+entity_type: node
+bundle: auction_item
+label: Value
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

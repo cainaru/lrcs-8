@@ -1,0 +1,18 @@
+uuid: c2c6a6f0-0eb9-4ce4-b2a8-34e6cb1c3d32
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: ewb_general
+label: 'EWB - General'
+code: "/* garbage -- not needed anymore\r\n.main-container {\r\n    font-size: 18px;\r\n    font-family: \"Avenir\", \"Helvetica\", sans-serif;\r\n    color: #333333;\r\n    font-weight: 300\r\n    line-height: 150%;\r\n    text-rendering: optimizeLegibility;\r\n} */"
+media: all
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      university_bootstrap: university_bootstrap
+    negate: false
+conditions_require_all: true

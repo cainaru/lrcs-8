@@ -1,0 +1,29 @@
+uuid: 7651d7a9-232f-4919-93c6-48934de22a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.auction_item_image.field_auction_image
+    - image.style.thumbnail
+    - media_entity.bundle.auction_item_image
+  module:
+    - image
+id: media.auction_item_image.default
+targetEntityType: media
+bundle: auction_item_image
+mode: default
+content:
+  field_auction_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  moderation_state: true
+  name: true
+  path: true
+  uid: true

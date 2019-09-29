@@ -1,0 +1,22 @@
+uuid: 5a0cec94-4b8d-4b1e-afbf-8817e7b8e7f3
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - lrcs_bootstrap
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: lrcs_bootstrap_breadcrumbs
+theme: lrcs_bootstrap
+region: header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

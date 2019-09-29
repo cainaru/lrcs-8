@@ -1,0 +1,449 @@
+/**
+ * Navbar styling.
+ */
+$mobile:          "screen and (max-width: #{$screen-xs-max})";
+$tablet:          "screen and (min-width: #{$screen-sm-min})";
+$normal:          "screen and (min-width: #{$screen-md-min})";
+$wide:            "screen and (min-width: #{$screen-lg-min})";
+$grid-breakpoint: "screen and (min-width: #{$grid-float-breakpoint})";
+
+body {
+  // Fix horizontal scrolling on iOS devices.
+  // http://drupal.org/node/1870076
+  position: relative;
+
+  &.navbar-is-static-top {
+    margin-top: 0;
+  }
+  &.navbar-is-fixed-top {
+    margin-top: 54px;
+
+    @media (min-width: $grid-float-breakpoint) {
+      margin-top: 108px;
+    }
+
+   &.navbar-has-university-brand {
+      margin-top: 82px;
+    }
+  }
+  &.navbar-is-fixed-bottom {
+    padding-bottom: calc($navbar-height + ($grid-gutter-width / 2));
+  }
+
+  @media #{$tablet} {
+    margin-top: ($grid-gutter-width / 2);
+  }
+  @media #{$mobile} {
+    &.toolbar-vertical {
+      &.navbar-is-fixed-top,
+      &.navbar-is-fixed-bottom {
+        .toolbar-bar {
+          position: fixed;
+        }
+        header {
+          z-index: 500;
+        }
+      }
+      // Default toolbar fixed height value.
+      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+      &.navbar-is-fixed-top header {
+        top: 39px;
+      }
+    }
+  }
+}
+.navbar.container {
+  @media #{$tablet} {
+    max-width: (($container-sm - $grid-gutter-width));
+  }
+  @media #{$normal} {
+    max-width: (($container-md - $grid-gutter-width));
+  }
+  @media #{$wide} {
+    max-width: (($container-lg - $grid-gutter-width));
+  }
+}
+
+// Branding.
+.navbar .logo {
+  margin-right: -($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  @media #{$grid-breakpoint} {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// ========================================
+// Primary Sidebar/First Sidebar Region
+// ========================================
+.university-sidebar {
+  .region-sidebar-first {
+    nav {
+      margin-top: 3rem;
+    }
+
+    .navbar-nav {
+      ul {
+        float: none;
+      }
+
+      // Uncollapse the nav
+      @media (min-width: $grid-float-breakpoint) {
+        float: none;
+        margin: 0;
+        > li {
+          float: none;
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// Site name in main Navbar
+// ========================================
+.navbar-brand {
+  font-weight: 400;
+  line-height: inherit;
+  margin: 0;
+}
+
+// ========================================
+// Navbar links 
+// ========================================
+.navbar-nav, .navbar-nav li a {
+  font-size: $nav-font-size;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.region-navigation-utility .navbar-nav, .region-navigation-utility .navbar-nav li a {
+  font-size: $h6-font-size;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.navbar-nav {
+  li > a {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    } 
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+
+   li > a {
+      padding-top: calc(#{$navbar-padding-vertical} + 3px);
+      padding-bottom: calc(#{$navbar-padding-vertical} + 3px);
+    }
+  }
+  .open .dropdown-menu,
+  .dropdown-menu {
+    li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.navbar .btn {
+  margin-top: calc(#{$line-height-computed / 3} - 1.5px);
+  margin-bottom: calc(#{$line-height-computed / 3} - 1.5px);
+}
+
+.navbar-static-top {
+  border-width: 0 0 1px;
+}
+
+.navbar-fixed-top {
+  border-width: 0 0 1px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: $navbar-padding-horizontal;
+  padding: 10px 10px;
+  @include navbar-vertical-align(22px);
+  background-color: transparent;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 0px solid transparent;
+  border-radius: $border-radius-base;
+
+  // We remove the `outline` here, but later compensate by attaching `:hover`
+  // styles to `:focus`.
+  &:focus {
+    outline: 0;
+  }
+
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 0px;
+  }
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+}
+
+.navbar {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: ($line-height-computed * 1.5);
+    padding-bottom: ($line-height-computed / 2);
+  }
+}
+
+.navbar-collapse {
+  border-width: 1px 0 0;
+}
+
+.navbar .region-navigation-collapsible {
+  @media (min-width: $grid-float-breakpoint) {
+    float: right;
+  }
+}
+
+.navbar .region-navigation-utility {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    background-color: $color-primary-darkest;
+
+  @media (min-width: $grid-float-breakpoint) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation-utility {
+    @media (min-width: $grid-float-breakpoint) {
+      float: right;
+    }
+  }
+}
+
+.navbar #block-lrcs-bootstrap-main-menu,
+.navbar #block-lrcs-bootstrap-account-menu {
+  display: inline;
+}
+
+
+// ========================================
+// Navbar colors
+// ========================================
+
+.navbar-default {
+
+  .region-navigation-utility .navbar-nav {
+
+    @media (min-width: $grid-float-breakpoint) {
+
+     li > a {
+        padding-top: calc(#{$navbar-padding-vertical} - 8px);
+        padding-bottom: calc(#{$navbar-padding-vertical} - 8px);
+      }
+    }
+
+    > li > a {
+      color: $color-cool-blue-lightest;
+
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $navbar-default-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $color-white;
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+
+  .navbar-nav {
+
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
+      }
+    }
+
+    .open .dropdown-menu {
+      border-color: $navbar-default-border;
+
+        > .dropdown-header {
+          border-color: $navbar-default-border;
+        }
+        .divider {
+          background-color: $navbar-default-border;
+        }
+        > li > a {
+          color: $navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-hover-color;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+          }
+        }
+      }
+
+    
+  }
+}
+
+// Inverse navbar (default)
+
+.navbar-inverse {
+  .navbar-brand a {
+    color: $navbar-inverse-brand-color;
+  }
+
+  ul > li > a {
+    color: $navbar-inverse-link-color;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      color: $navbar-inverse-link-hover-color;
+      background-color: $navbar-inverse-link-hover-bg;
+    }
+  }
+
+  .navbar-nav {
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-inverse-link-active-bg;
+        color: $navbar-inverse-link-active-color;
+      }
+    }
+
+    .open .dropdown-menu {
+      background-color: $navbar-inverse-link-active-bg;
+      border-color: $navbar-inverse-border;
+
+        > .dropdown-header {
+          border-color: $navbar-inverse-border;
+        }
+        .divider {
+          background-color: $navbar-inverse-border;
+        }
+        > li > a {
+          color: $navbar-inverse-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-hover-color;
+            background-color: $navbar-inverse-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-active-color;
+            background-color: $navbar-inverse-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-disabled-color;
+            background-color: $navbar-inverse-link-disabled-bg;
+          }
+        }
+      }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > .dropdown-header {
+          border-color: $navbar-inverse-border;
+        }
+        .divider {
+          background-color: $navbar-inverse-border;
+        }
+        > li > a {
+          color: $navbar-inverse-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-hover-color;
+            background-color: $navbar-inverse-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-active-color;
+            background-color: $navbar-inverse-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-inverse-link-disabled-color;
+            background-color: $navbar-inverse-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Navbar form
+//
+// Extension of the `.form-inline` with some extra flavor for optimum display in
+// our navbars.
+
+.navbar-form {
+  // Vertically center in expanded, horizontal navbar
+  @include navbar-vertical-align(($input-height-base + 1.10rem));
+
+}

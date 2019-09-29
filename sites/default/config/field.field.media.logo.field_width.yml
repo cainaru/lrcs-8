@@ -1,0 +1,23 @@
+uuid: 90ed78ce-3fc7-4e81-ba15-69a6120315f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_width
+    - media_entity.bundle.logo
+id: media.logo.field_width
+field_name: field_width
+entity_type: media
+bundle: logo
+label: Width
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
